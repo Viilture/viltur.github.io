@@ -283,4 +283,53 @@ body::after {
         display: block;
         text-align: left;
     }
+
+            /* Стили для списка ссылок */
+            .links-section {
+                padding: 100px 20px 20px 20px; /* Добавлено верхнее заполнение для учета фиксированной навигации */
+                background-color: rgba(244, 244, 244, 0.9);
+                min-height: 100vh;
+            }
+    
+            .links-section h2 {
+                text-align: center;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .links-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                list-style-type: none;
+                padding: 0;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+    
+            .links-list li {
+                /* Дополнительные стили при необходимости */
+            }
+    
+            .links-list a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                background-color: #fff;
+                color: #333;
+                text-decoration: none;
+                border: 2px solid #333;
+                border-radius: 8px;
+                transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                text-align: center;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+    
+            .links-list a:hover {
+                background-color: #333;
+                color: #fff;
+                transform: scale(1.05);
+            }
 }
