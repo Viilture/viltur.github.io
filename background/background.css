@@ -214,19 +214,6 @@ body::after {
     backdrop-filter: blur(10px);
 }
 
-.chapter {
-    display: flex;
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    margin-bottom: 20px; /* Отступ между главами */
-}
-.chapter img {
-    max-width: 200px; /* Максимальная ширина изображения */
-    margin-right: 20px; /* Отступ справа от изображения */
-    height: auto; /* Сохранение пропорций */
-}
-.chapter p {
-    flex: 1; /* Занять оставшееся пространство */
-}
 
 .chapter h3 {
     text-align: center;
