@@ -18,69 +18,15 @@
         <a href="https://viilture.github.io/viltur.github.io/Content/Instructions/Instructions.html">Инструкции</a>
     </div>
     
-    <!-- Фиксированное Оглавление -->
-    <div class="sidebar">
-        <h2>Модули STL</h2>
-        <ul>
-            <li><a href="#chapter1">Метапрограммирование</a></li>
-   
-            <!-- Добавьте дополнительные главы по необходимости -->
+    <div class="links-section">
+        <h2>Метапрограммирование</h2>
+        <ul class="links-list">
+            <li><a href="https://viilture.github.io/viltur.github.io/Content/СPP/STL/Meta/MetaPO.html" >STL</a></li>
         </ul>
-    </div>
-
-    <!-- Основное Содержимое -->
-    <div class="main-content" id="home">
-
-        <!-- Главы Книги -->
-        <div class="chapter" id="chapter1">
-            <h3>Метапрограммирование</h3>
-            <img src="https://viilture.github.io/viltur.github.io/Content/CPP/STL/Meta/MetaPO.html" width="300" height="500">
-            <p>
-
-                <h1>Метапрограммирование в C++</h1>
-
-<h2>Основные концепции</h2>
-<ul>
-    <li><strong>Шаблоны:</strong> Позволяют создавать обобщенные функции и классы.</li>
-    <li><strong>Типовые трейты:</strong> Проверка свойств типов во время компиляции.</li>
-    <li><strong>SFINAE:</strong> Избегание ошибок при подстановке типов.</li>
-</ul>
-
-<h2>Примеры</h2>
-
-<h3>Шаблон функции</h3>
-<pre><code>template&lt;typename T&gt;
-T max(T a, T b) {
-    return (a &gt; b) ? a : b;
-}</code></pre>
-
-<h3>Вычисление факториала</h3>
-<pre><code>template&lt;int N&gt;
-struct Factorial {
-    static const int value = N * Factorial&lt;N - 1&gt;::value;
-};
-
-template&lt;&gt;
-struct Factorial&lt;0&gt; {
-    static const int value = 1;
-};</code></pre>
-
-<h3>Проверка типов</h3>
-<pre><code>#include &lt;type_traits&gt;
-
-template&lt;typename T&gt;
-void func() {
-    static_assert(std::is_integral&lt;T&gt;::value, "T must be integral");
-}</code></pre>
-
-<h2>Заключение</h2>
-<p>Метапрограммирование в C++ позволяет создавать эффективные и гибкие решения, используя возможности шаблонов и типовых трейтов.</p></p>
-        </div>
 
     </div>
 
-
-
+    
 
 </body>
 </html>
