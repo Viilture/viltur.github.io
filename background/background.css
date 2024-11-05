@@ -337,3 +337,8 @@ body::after {
             color: #fff;
             transform: scale(1.05);
         }
+
+        a {
+            color: white; /* Цвет текста ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
