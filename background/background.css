@@ -12,7 +12,7 @@ body {
     position: relative;
     min-height: 100vh;
     /* Темнее галактический градиентный фон */
-    background: linear-gradient(to bottom, #000814, #001d3d, #000814);
+    /* background: linear-gradient(to bottom, #000814, #001d3d, #000814); */
     overflow-x: hidden;
     color: #fff;
 }
