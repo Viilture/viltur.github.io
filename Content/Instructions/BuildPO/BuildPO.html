@@ -3,33 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viilture</title>
-    <!-- Подключение внешнего CSS для фона -->
-    <link rel="stylesheet" href="https://viilture.github.io/viltur.github.io/background/background.css">
-
+    <title>Копировать код</title>
+    <style>
+        .code-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            border: none;
+            resize: none;
+            font-family: monospace;
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="https://viilture.github.io/viltur.github.io/">Главная</a>
-        <a href="#about">Linux</a>
-        <a href="https://viilture.github.io/viltur.github.io/Content/Literature/LiteratureMain.html">Литература</a>
-        <a href="https://viilture.github.io/viltur.github.io/Content/СPP/СPPMain.html">С++</a>
-        <a href="https://viilture.github.io/viltur.github.io/Content/Instructions/Instructions.html">Инструкции</a>
-    </div>
-    
+<div class="code-container">
+    <h3>Введите ваш код:</h3>
+    <textarea id="codeInput" placeholder="Напишите ваш код здесь..."></textarea>
+    <button id="copyButton">Копировать</button>
+</div>
 
-    <div class="links-section">
-
-        <h2>Qt6.9</h2>
-        <ul class="links-list">
-            <li><a href="https://viilture.github.io/viltur.github.io/Content/Instructions/BuildPO/QT/Qt6_9_Windows.html">Сборка QT6.9 под Windows</a></li>
-        </ul>
-    </div>
-
-  
-
-
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+        const codeInput = document.getElementById('codeInput');
+        codeInput.select();
+        document.execCommand('copy');
+        alert('Код скопирован в буфер обмена!');
+    });
+</script>
 
 </body>
 </html>
