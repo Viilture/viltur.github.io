@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viilture</title>
+    <!-- Подключение внешнего CSS для фона -->
+    <link rel="stylesheet" href="https://viilture.github.io/viltur.github.io/background/background.css">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="https://viilture.github.io/viltur.github.io/">Главная</a>
+        <a href="#about">Linux</a>
+        <a href="https://viilture.github.io/viltur.github.io/Content/Literature/LiteratureMain.html">Литература</a>
+        <a href="https://viilture.github.io/viltur.github.io/Content/СPP/СPPMain.html">С++</a>
+        <a href="https://viilture.github.io/viltur.github.io/Content/Instructions/Instructions.html">Инструкции</a>
+    </div>
+    
+
+
+    <!-- Основное Содержимое -->
+    <div class="main-content" id="home">
+
+
+        <body>
+            <header>
+                <h1>Изучаем C++: std::decay</h1>
+            </header>
+        
+            <main>
+                <section>
+                    <h2>Что такое std::decay?</h2>
+                    <p>
+                        <code>std::decay</code> — это стандартный метафункция в C++, которая преобразует типы, удаляя ссылки и константные квалификаторы, а также заменяя массивы и функции на указатели. Эта метафункция полезна, когда вам нужно получить "чистый" тип, который можно использовать в шаблонах и других контекстах.
+                    </p>
+                </section>
+        
+                <section>
+                    <h2>Пример использования std::decay</h2>
+                    <pre>
+        <code>
+        #include &lt;iostream&gt;
+        #include &lt;type_traits&gt;
+        
+        template &lt;typename T&gt;
+        void printType() {
+            std::cout &lt;&lt; "Тип: " &lt;&lt; typeid(typename std::decay&lt;T&gt;::type).name() &lt;&lt; std::endl;
+        }
+        
+        int main() {
+            int arr[10];
+            printType&lt;decltype(arr)&gt;(); // Вывод: Тип: Pii (указатель на int)
+        
+            const int& ref = 42;
+            printType&lt;decltype(ref)&gt;(); // Вывод: Тип: i (int)
+        
+            return 0;
+        }
+        </code>
+                    </pre>
+                </section>
+        
+                <section>
+                    <h2>Когда использовать std::decay?</h2>
+                    <p>
+                        Используйте <code>std::decay</code>, когда вам нужно получить тип без ссылок и константных квалификаторов, а также когда вы хотите заменить массивы и функции на указатели. Это может быть полезно в шаблонах функций, где вы хотите обработать аргументы независимо от их исходного типа.
+                    </p>
+                </section>
+            </main>
+
+        </body>
+        
+
+    </div>
+
+
+
+
+</body>
+</html>
+
