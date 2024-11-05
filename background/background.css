@@ -209,7 +209,7 @@ body::after {
 .chapter {
     padding: 40px 20px;
     margin-bottom: 40px;
-    background-color: rgba(200, 200, 200, 0.1);
+    background-color: rgba(160, 160, 160, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(10px);
 }
